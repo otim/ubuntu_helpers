@@ -25,8 +25,13 @@ done
 
 # fancy bash coloring for git :)
 sh -c 'echo "export GIT_PS1_SHOWDIRTYSTATE=1" >> ~/.bashrc'
-echo "export PS1='\[\033[03;32m\]\u@\h\[\033[01;34m\]:\w\[\033[02;33m\]\$(__git_ps1)\[\033[01;34m\]\\$\[\033[00m\] '" >> ~/.bashrc
-
+echo "GREEN='\e[0;32m'" >> ~/.bashrc
+echo "RED='\e[0;31m'" >> ~/.bashrc
+echo "BLUE='\e[0;34m'" >> ~/.bashrc
+echo "YELLOW='\e[0;33m'" >> ~/.bashrc
+echo "CYAN='\e[0;36m'" >> ~/.bashrc
+echo "WHITE='\e[0;37m'" >> ~/.bashrc
+echo 'export PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\\033[m\]\[$CYAN\]\$(__git_ps1)\[$WHITE\]\$ "' >> ~/.bashrc
 
 echo ""
 read -p "your git user name (Full name)? " git_name
