@@ -43,6 +43,12 @@ sudo apt-get install ros-indigo-node-manager-fkie -y
 # install catkin tools
 sudo apt-get install python-catkin-tools -y
 
+# install rosemacs
+sudo apt-get install ros-indigo-rosemacs -y
+echo "(add-to-list 'load-path \"/opt/ros/indigo/share/emacs/site-lisp\")" >> ~/.emacs.d/init.el
+echo ";; or whatever your install space is + \"/share/emacs/site-lisp\"" >> ~/.emacs.d/init.el
+echo "(require 'rosemacs-config)" >> ~/.emacs.d/init.el
+
 
 echo
 echo "*** SETTING UP ROS ***"
